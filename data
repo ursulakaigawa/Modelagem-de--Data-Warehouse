@@ -1,0 +1,55 @@
+CREATE DATABASE IF NOT EXISTS portfolio_engineer;
+USE portfolio_engineer;
+
+-- Tabela food
+CREATE TABLE food (
+    Food_POOD_CODE VARCHAR(10) PRIMARY KEY,
+    dinner_service_VIRGINES_MIN INT,
+    dinner_service_DINNERS_MIN VARCHAR(10),
+    dinner_service_POOD_CODE VARCHAR(10)
+);
+
+-- Tabela venue
+CREATE TABLE venue (
+    VENUE_CODE VARCHAR(10) PRIMARY KEY,
+    VENUE_DESCRIPTION VARCHAR(10)
+);
+
+-- Tabela dinner_service
+CREATE TABLE dinner_service (
+    THEREKS_MIN INT,
+    DINNERS_MIN VARCHAR(10),
+    TROUD_CODE VARCHAR(10),
+    PRIMARY KEY (DINNERS_MIN, TROUD_CODE)
+);
+
+-- Tabela members
+CREATE TABLE members (
+    THEREKS_MIN INT,
+    THEREKS_MINE VARCHAR(10),
+    THEREKS_MODRESS VARCHAR(25),
+    PRIMARY KEY (THEREKS_MIN, THEREKS_MINE)
+);
+
+-- Tabela Modeling Addison
+CREATE TABLE Modeling_Addison (
+    DINNERS_MIN VARCHAR(10),
+    DINNERS_DATE DATE,
+    VENUE_CODE VARCHAR(10),
+    PRIMARY KEY (DINNERS_MIN, DINNERS_DATE),
+    FOREIGN KEY (VENUE_CODE) REFERENCES venue(VENUE_CODE)
+);
+
+-- Tabela user
+CREATE TABLE user (
+    username VARCHAR(50) PRIMARY KEY,
+    email VARCHAR(100),
+    password VARCHAR(100)
+);
+
+-- Tabela category
+CREATE TABLE category (
+    category_id INT PRIMARY KEY,
+    name VARCHAR(100)
+);
+
